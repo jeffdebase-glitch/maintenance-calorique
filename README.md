@@ -9,11 +9,13 @@ Application statique, locale et hors ligne pour tester progressivement un apport
 3. L’application observe les tendances et propose, sans appliquer automatiquement, de nouveaux paliers.
 4. Exporter régulièrement **Réglages → Sauvegarde JSON**. IndexedDB reste sur le navigateur/appareil utilisé : un autre iPhone ou Safari n’aura pas automatiquement les données.
 
+Le guide détaillé d’utilisation et de configuration est disponible dans [GUIDE_UTILISATION.md](GUIDE_UTILISATION.md).
+
 ## Publication sur GitHub Pages
 
-1. Créer un dépôt GitHub, puis déposer **le contenu du dossier `maintenance-calorique` à la racine** du dépôt (ne pas déposer seulement le ZIP).
+1. Créer un dépôt GitHub, puis déposer **le contenu du dossier maintenance-calorique à la racine** du dépôt (ne pas déposer seulement le ZIP).
 2. Dans **Settings → Pages → Build and deployment**, choisir **Deploy from a branch**, branche **main**, dossier **/(root)**, puis **Save**.
-3. Ouvrir l’URL indiquée par GitHub Pages en HTTPS. Lors d’une nouvelle version du code, incrémenter `CACHE` dans `sw.js` (par exemple `palier-shell-v2`) pour actualiser l’app shell. Ne jamais effacer la base IndexedDB pendant une mise à jour.
+3. Ouvrir l’URL indiquée par GitHub Pages en HTTPS. Lors d’une nouvelle version du code, incrémenter CACHE dans sw.js (par exemple palier-shell-v2) pour actualiser l’app shell. Ne jamais effacer la base IndexedDB pendant une mise à jour.
 
 Pour un essai local : `python3 -m http.server 8000` dans ce dossier, puis `http://localhost:8000`. Un fichier ouvert directement avec `file://` n’installe pas la PWA et ne teste pas le service worker.
 
